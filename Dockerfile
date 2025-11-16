@@ -3,6 +3,9 @@ FROM node:20-bullseye
 # Устанавливаем Python и pip
 RUN apt-get update && apt-get install -y python3 python3-pip gcc libffi-dev libssl-dev
 
+# Создаём символическую ссылку для python
+RUN ln -s /usr/bin/python3 /usr/bin/python
+
 # Устанавливаем рабочую директорию
 WORKDIR /app
 
