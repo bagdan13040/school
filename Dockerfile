@@ -22,6 +22,7 @@ COPY . .
 
 # Открываем порт
 EXPOSE 3000
+EXPOSE 5000
 
-# Запускаем приложение
-CMD ["npm", "start"]
+# Запускаем оба сервиса одновременно
+CMD ["npx", "concurrently", "npm start", "python3 -m uvicorn ai_modul.api_server:app --host 0.0.0.0 --port 5000"]
