@@ -1,0 +1,62 @@
+/* Styles specifically for the AI page to make UI modern and pleasant */
+
+.ai-container {
+    background: linear-gradient(180deg, rgba(255,255,255,0.85), rgba(249,250,251,0.9));
+    border: 1px solid var(--border-color);
+    border-radius: 14px;
+    padding: 24px;
+    box-shadow: var(--shadow-lg);
+}
+
+.ai-container h1 {
+    font-size: 28px;
+    margin-bottom: 12px;
+    color: var(--text-primary);
+}
+
+#ai-form select,
+#ai-form textarea {
+    padding: 12px 14px;
+    border-radius: 10px;
+    border: 1px solid var(--border-color);
+    background: #ffffff;
+    font-size: 15px;
+    color: var(--text-primary);
+    box-shadow: none;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+#ai-form select:focus,
+#ai-form textarea:focus {
+    outline: none;
+    border-color: var(--border-focus);
+    box-shadow: 0 6px 20px rgba(37,99,235,0.08);
+}
+
+#ai-form button {
+    padding: 10px 18px;
+    border-radius: 10px;
+    border: none;
+    background: linear-gradient(90deg,var(--primary-color),var(--primary-light));
+    color: var(--text-white);
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+#ai-form button:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+#ai-response {
+    white-space: pre-wrap;
+    font-size: 15px;
+    color: var(--text-primary);
+}
+
+/* Make layout responsive */
+@media (max-width: 720px) {
+    .ai-container { padding: 18px; }
+    #ai-form textarea { min-height: 140px; }
+}

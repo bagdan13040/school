@@ -1,0 +1,332 @@
+<section class="info-shell">
+    <div class="info-shell__backdrop" aria-hidden="true"></div>
+    <div class="container">
+        <div class="info-hero">
+            <div class="info-hero__intro">
+                <p class="info-tag">Обновлено {{info.lastUpdated}}</p>
+                <h1>Сведения об образовательной организации</h1>
+                <p class="info-hero__mission">{{info.mission}}</p>
+                <div class="info-legal">
+                    {{#each info.legalReferences}}
+                        <span class="info-legal__chip">{{this}}</span>
+                    {{/each}}
+                </div>
+                <div class="info-hero__actions">
+                    <a class="info-button info-button--light" href="#documents">Документы</a>
+                    <a class="info-button" href="#contacts">Контакты</a>
+                </div>
+            </div>
+            <div class="info-hero__cards">
+                <article class="info-hero__card info-hero__card--primary">
+                    <p class="info-eyebrow">МАОУ «Лицей № 5»</p>
+                    <h3>{{info.basic.officialName}}</h3>
+                    <dl>
+                        <div><dt>Адрес</dt><dd>{{info.basic.address}}</dd></div>
+                        <div><dt>Учредитель</dt><dd>{{info.basic.founder}}</dd></div>
+                        <div><dt>ОГРН</dt><dd>{{info.basic.ogrn}}</dd></div>
+                        <div><dt>ИНН</dt><dd>{{info.basic.inn}}</dd></div>
+                    </dl>
+                </article>
+                <article class="info-hero__card" id="contacts">
+                    <h3>Контакты</h3>
+                    <ul>
+                        <li><span>Директор</span><strong>{{info.basic.contacts.director.name}}</strong><a href="tel:{{info.basic.contacts.director.phone}}">{{info.basic.contacts.director.phone}}</a><a href="mailto:{{info.basic.contacts.director.email}}">{{info.basic.contacts.director.email}}</a></li>
+                        <li><span>Приёмная</span><strong>{{info.basic.contacts.secretary.phone}}</strong><a href="mailto:{{info.basic.contacts.secretary.email}}">{{info.basic.contacts.secretary.email}}</a></li>
+                        <li><span>Горячая линия</span><strong>{{info.basic.contacts.hotline.phone}}</strong><small>{{info.basic.contacts.hotline.hours}}</small></li>
+                    </ul>
+                </article>
+                <article class="info-hero__card info-hero__card--glass">
+                    <h3>Правовой статус</h3>
+                    <p>Лицензия {{info.basic.license.number}}</p>
+                    <p>{{info.basic.license.issuer}}</p>
+                    <div class="info-divider"></div>
+                    <p>Аккредитация: {{info.basic.accreditation.number}}</p>
+                    <p>{{info.basic.accreditation.validTo}}</p>
+                </article>
+            </div>
+        </div>
+        <div class="info-highlight-grid">
+            {{#each info.highlights}}
+                <article class="info-highlight">
+                    <span class="info-highlight__value">{{value}}</span>
+                    <p class="info-highlight__label">{{label}}</p>
+                    <small>{{description}}</small>
+                </article>
+            {{/each}}
+        </div>
+    </div>
+</section>
+
+<nav class="info-anchorbar" aria-label="Навигация по разделам">
+    <div class="container">
+        <div class="info-anchorbar__scroll">
+            <a href="#basic">Основные сведения</a>
+            <a href="#structure">Структура</a>
+            <a href="#documents">Документы</a>
+            <a href="#programs">Образование</a>
+            <a href="#personnel">Педагоги</a>
+            <a href="#inclusion">Доступная среда</a>
+            <a href="#finance">Финансы</a>
+            <a href="#vacancies">Вакансии</a>
+            <a href="#international">Международное</a>
+            <a href="#timeline">История</a>
+        </div>
+    </div>
+</nav>
+
+<main class="info-stage" id="main">
+    <section id="basic" class="info-section">
+        <div class="container info-section__grid">
+            <header class="info-section__meta">
+                <span class="info-index">01</span>
+                <div>
+                    <p class="info-eyebrow">Раздел I</p>
+                    <h2>Основные сведения</h2>
+                </div>
+                <p>Учредитель, адрес, реквизиты и контакты, предусмотренные статьёй 29 ФЗ-273 и Постановлением № 582.</p>
+            </header>
+            <div class="info-section__content">
+                <div class="info-data-grid">
+                    <dl>
+                        <div><dt>Полное наименование</dt><dd>{{info.basic.officialName}}</dd></div>
+                        <div><dt>Краткое название</dt><dd>{{info.basic.shortName}}</dd></div>
+                        <div><dt>Учредитель</dt><dd>{{info.basic.founder}}</dd></div>
+                        <div><dt>Адрес</dt><dd>{{info.basic.address}}</dd></div>
+                        <div><dt>ОГРН</dt><dd>{{info.basic.ogrn}}</dd></div>
+                        <div><dt>ИНН</dt><dd>{{info.basic.inn}}</dd></div>
+                        <div><dt>ОКПО</dt><dd>{{info.basic.okpo}}</dd></div>
+                    </dl>
+                </div>
+                <article class="info-panel info-panel--glass">
+                    <h3>Лицензия и аккредитация</h3>
+                    <p>Лицензия {{info.basic.license.number}}, выдана {{info.basic.license.issuer}}</p>
+                    <p>Аккредитация {{info.basic.accreditation.number}}, действует до {{info.basic.accreditation.validTo}}</p>
+                    <div class="info-divider"></div>
+                    <h4>Контакты</h4>
+                    <ul>
+                        <li><strong>Директор:</strong> {{info.basic.contacts.director.name}} — {{info.basic.contacts.director.phone}}, {{info.basic.contacts.director.email}}</li>
+                        <li><strong>Приёмная:</strong> {{info.basic.contacts.secretary.phone}}, {{info.basic.contacts.secretary.email}}</li>
+                        <li><strong>Горячая линия:</strong> {{info.basic.contacts.hotline.phone}} ({{info.basic.contacts.hotline.hours}})</li>
+                    </ul>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section id="structure" class="info-section">
+        <div class="container info-section__grid">
+            <header class="info-section__meta">
+                <span class="info-index">02</span>
+                <div>
+                    <p class="info-eyebrow">Раздел II</p>
+                    <h2>Структура и управление</h2>
+                </div>
+                <p>Руководители и основные ответственные за направления работы лицея.</p>
+            </header>
+            <div class="info-section__content">
+                <div class="info-people-grid">
+                    {{#each info.structure}}
+                        <article class="info-person">
+                            <p class="info-person__role">{{title}}</p>
+                            <h3>{{person}}</h3>
+                            <p>{{phone}}</p>
+                            <a href="mailto:{{email}}">{{email}}</a>
+                        </article>
+                    {{/each}}
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="documents" class="info-section">
+        <div class="container info-section__grid">
+            <header class="info-section__meta">
+                <span class="info-index">03</span>
+                <div>
+                    <p class="info-eyebrow">Раздел III</p>
+                    <h2>Документы</h2>
+                </div>
+                <p>Основные локальные акты доступны для скачивания в формате PDF.</p>
+            </header>
+            <div class="info-section__content">
+                <div class="info-doc-list">
+                    {{#each info.documents}}
+                        <a href="{{url}}" class="info-doc-card" target="_blank" rel="noopener">
+                            <div>
+                                <span class="info-doc-card__type">{{type}}</span>
+                                <h3>{{title}}</h3>
+                                <p>{{size}}</p>
+                            </div>
+                            <span class="info-doc-card__icon" aria-hidden="true">⤓</span>
+                        </a>
+                    {{/each}}
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="personnel" class="info-section">
+        <div class="container info-section__grid">
+            <header class="info-section__meta">
+                <span class="info-index">05</span>
+                <div>
+                    <p class="info-eyebrow">Раздел V</p>
+                    <h2>Педагогический состав</h2>
+                </div>
+                <p>{{info.personnel.professionalDevelopment}}</p>
+            </header>
+            <div class="info-section__content">
+                <div class="info-statlist">
+                    <div><span>Педагоги</span><strong>{{info.personnel.total}}</strong></div>
+                    <div><span>Высшая категория</span><strong>{{info.personnel.withHighestCategory}}</strong></div>
+                    <div><span>Первая категория</span><strong>{{info.personnel.withFirstCategory}}</strong></div>
+                    <div><span>Средний стаж</span><strong>{{info.personnel.averageExperience}}</strong></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="inclusion" class="info-section">
+        <div class="container info-section__grid">
+            <header class="info-section__meta">
+                <span class="info-index">06</span>
+                <div>
+                    <p class="info-eyebrow">Раздел VI</p>
+                    <h2>Доступная среда</h2>
+                </div>
+                <p>Меры по обеспечению условий для обучающихся с ОВЗ и инвалидностью.</p>
+            </header>
+            <div class="info-section__content info-section__content--split">
+                <article class="info-panel">
+                    <h3>Мероприятия</h3>
+                    <ul>
+                        {{#each info.inclusion.accessibilityMeasures}}
+                            <li>{{this}}</li>
+                        {{/each}}
+                    </ul>
+                </article>
+                <article class="info-panel info-panel--accent">
+                    <h3>Ассистивные технологии</h3>
+                    <ul>
+                        {{#each info.inclusion.assistiveTechnologies}}
+                            <li>{{this}}</li>
+                        {{/each}}
+                    </ul>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section id="finance" class="info-section">
+        <div class="container info-section__grid">
+            <header class="info-section__meta">
+                <span class="info-index">07</span>
+                <div>
+                    <p class="info-eyebrow">Раздел VII</p>
+                    <h2>Финансово-хозяйственная деятельность</h2>
+                </div>
+                <p>Структура бюджета и направления расходования средств.</p>
+            </header>
+            <div class="info-section__content info-section__content--split">
+                <article class="info-panel">
+                    <span class="info-pill">Бюджет</span>
+                    <h3>{{info.finance.budget}}</h3>
+                    <h4>Источники</h4>
+                    <ul>
+                        {{#each info.finance.sources}}
+                            <li>{{this}}</li>
+                        {{/each}}
+                    </ul>
+                </article>
+                <article class="info-panel info-panel--glass">
+                    <h4>Расходы</h4>
+                    <ul class="info-progress-list">
+                        <li><span>Оплата труда</span><strong>{{info.finance.expenses.salary}}</strong></li>
+                        <li><span>Содержание зданий</span><strong>{{info.finance.expenses.facilities}}</strong></li>
+                        <li><span>Оборудование</span><strong>{{info.finance.expenses.equipment}}</strong></li>
+                        <li><span>Развитие</span><strong>{{info.finance.expenses.development}}</strong></li>
+                    </ul>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section id="vacancies" class="info-section">
+        <div class="container info-section__grid">
+            <header class="info-section__meta">
+                <span class="info-index">08</span>
+                <div>
+                    <p class="info-eyebrow">Раздел VIII</p>
+                    <h2>Вакантные места</h2>
+                </div>
+                <p>Актуальные вакансии и контакты для связи.</p>
+            </header>
+            <div class="info-section__content">
+                <div class="info-tiles">
+                    {{#each info.vacancies}}
+                        <article class="info-tile">
+                            <span class="info-pill">{{salary}}</span>
+                            <h3>{{title}}</h3>
+                            <p>{{requirements}}</p>
+                            <p class="info-tile__contact">Контакт: {{contact}}</p>
+                        </article>
+                    {{/each}}
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="international" class="info-section">
+        <div class="container info-section__grid">
+            <header class="info-section__meta">
+                <span class="info-index">09</span>
+                <div>
+                    <p class="info-eyebrow">Раздел IX</p>
+                    <h2>Международное сотрудничество</h2>
+                </div>
+                <p>Партнёрства и совместные проекты.</p>
+            </header>
+            <div class="info-section__content info-section__content--split">
+                <article class="info-panel">
+                    <h3>Партнёры</h3>
+                    <ul>
+                        {{#each info.international.partners}}
+                            <li>{{this}}</li>
+                        {{/each}}
+                    </ul>
+                </article>
+                <article class="info-panel">
+                    <h3>Проекты</h3>
+                    <ul>
+                        {{#each info.international.projects}}
+                            <li>{{this}}</li>
+                        {{/each}}
+                    </ul>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section id="timeline" class="info-section info-section--dark">
+        <div class="container info-section__grid">
+            <header class="info-section__meta">
+                <span class="info-index">10</span>
+                <div>
+                    <p class="info-eyebrow">Раздел X</p>
+                    <h2>История и достижения</h2>
+                </div>
+                <p>Ключевые этапы развития лицея.</p>
+            </header>
+            <div class="info-section__content">
+                <div class="info-timeline-grid">
+                    {{#each info.timeline}}
+                        <article class="info-timeline-card">
+                            <span class="info-timeline-card__year">{{year}}</span>
+                            <p>{{event}}</p>
+                        </article>
+                    {{/each}}
+                </div>
+            </div>
+        </div>
+    </section>
+</main>

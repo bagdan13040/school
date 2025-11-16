@@ -1,0 +1,14 @@
+{
+  "name": "sps-v2",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "node app.js",
+    "start-api": "cd ai_modul && python -m uvicorn api_server:app --host 127.0.0.1 --port 5000",
+    "dev": "concurrently \"npm run start\" \"npm run start-api\""
+  },
+  "dependencies": {
+    "express": "^5.1.0",
+    "express-handlebars": "^8.0.3",
+    "concurrently": "^8.2.2"
+  }
+}

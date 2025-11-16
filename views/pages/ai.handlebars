@@ -1,0 +1,40 @@
+<main class="container" style="padding-top:96px;padding-bottom:40px;"> 
+    <div class="ai-container" style="max-width:900px;margin:0 auto;">
+        <h1>{{title}}</h1>
+
+        <form id="ai-form" class="form" style="margin-top:12px;">
+            <div class="form__group" style="display:flex;gap:12px;align-items:center;flex-wrap:wrap;">
+                <label for="model" class="form__label">Модель</label>
+                <select id="model" name="model" class="form__input" style="max-width:320px;">
+                    <option value="google/gemini-2.0-flash-exp:free">Gemini 2.0 Flash (Google, free)</option>
+                    <option value="openai/gpt-3.5-turbo">GPT-3.5 Turbo (OpenAI)</option>
+                    <option value="openai/gpt-4-turbo">GPT-4 Turbo (OpenAI)</option>
+                </select>
+            </div>
+
+            <div class="form__group">
+                <label for="prompt" class="form__label">Запрос</label>
+                <textarea id="prompt" name="prompt" class="form__input form__textarea" required placeholder="Введите ваш запрос... (например: Объясни понятие интеграла простыми словами)"></textarea>
+            </div>
+
+            <div class="form__group">
+                <label for="file" class="form__label">Загрузить файл (опционально)</label>
+                <input id="file" name="file" type="file" class="form__input" accept=".txt,.md,.pdf,.docx" />
+                <small class="text-muted">Поддерживаются: txt, md, pdf, docx (встроенная конвертация не выполняется — pdf/docx будут прочитаны как текст).</small>
+            </div>
+
+            <div style="display:flex;gap:12px;align-items:center;">
+                <button type="submit" class="btn btn--primary">Отправить</button>
+                <span id="ai-status" aria-live="polite"></span>
+            </div>
+        </form>
+
+        <div id="ai-result" style="margin-top:18px;">
+            <div id="ai-response" class="card" style="min-height:120px;">
+                <p class="text-muted">Ответ появится после отправки запроса.</p>
+            </div>
+        </div>
+    </div>
+</main>
+
+

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}}</title>
+    {{#each style}}
+        {{{this}}}
+    {{/each}}
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <div class="header__content">
+
+                <!-- Логотип -->
+                <div class="header__logo">
+                    <a class="logo" href="/" aria-label="Главная страница">
+                        <span class="logo__text">ЛИЦЕЙ №5</span>
+                    </a>
+                </div>
+
+                <!-- Навигация -->
+                <button class="nav-toggle" aria-label="Открыть меню" aria-expanded="false">
+                    <span class="nav-toggle__bar"></span>
+                    <span class="nav-toggle__bar"></span>
+                    <span class="nav-toggle__bar"></span>
+                </button>
+                <nav class="header__nav" data-mobile-collapsible>
+                    <ul class="nav-list">
+                        <li><a href="/about" class="nav-link">О ШКОЛЕ</a></li>
+                        <li><a href="/info" class="nav-link">СВЕДЕНИЯ</a></li>
+                        <!-- Новости удалены -->
+                        <li class="nav-item--dropdown">
+                            <a href="#" class="nav-link nav-link--dropdown">УЧЕНИКАМ</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="https://elschool.ru/Logon/Index" target="_blank" class="dropdown-item">Электронный дневник</a></li>
+                                <li><a href="/ai" class="dropdown-item">AI</a></li>
+                                <li><a href="/materials" class="dropdown-item">Образовательные материалы</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item--dropdown">
+                            <a href="#" class="nav-link nav-link--dropdown">ЭКЗАМЕНЫ</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="/exams/ege" class="dropdown-item">ЕГЭ</a></li>
+                                <li><a href="/exams/oge" class="dropdown-item">ОГЭ</a></li>
+                                <li><a href="/exams/vpr" class="dropdown-item">ВПР</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="/parents" class="nav-link">РОДИТЕЛЯМ</a></li>
+                    </ul>
+                </nav>
+
+                <!-- Контакты и кнопка -->
+                <div class="header__actions">
+                    <div class="header__phone">lic5ufa@yandex.ru</div>
+                    <!-- <button class="btn btn--primary">ЗАПИСАТЬСЯ</button> -->
+                </div>
+            </div>
+        </div>
+    </header>
+
+    {{{body}}}
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__left">
+                    <h3 class="footer__school-title">ЛИЦЕЙ №5</h3>
+                    <p>© 2025 Лицей №5</p>
+                    <p>г. Уфа, ул. Рабкоров, дом 13</p>
+                </div>
+                <div class="footer__right">
+                    <h3 class="footer__social-title">Социальные сети</h3>
+                    <div class="footer__social-links">
+                        <a href="#" class="social-link">
+                            <img loading="lazy" src="images/Telegram_2019_Logo.svg.png" alt="Telegram" class="social-icon" width="40" height="40">
+                        </a>
+                        <a href="#" class="social-link">
+                            <img loading="lazy" src="images/images.png" alt="Социальная сеть" class="social-icon" width="40" height="40">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    {{#each script}}
+        {{{this}}}
+    {{/each}}
+
+</body>
+</html>

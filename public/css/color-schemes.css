@@ -1,0 +1,258 @@
+/* Альтернативные цветовые схемы для сайта школы */
+
+/* Схема 1: Теплая и дружелюбная (Оранжево-коричневая) */
+.color-scheme-warm {
+    --primary-color: #f97316;          /* Оранжевый */
+    --primary-dark: #ea580c;           /* Темно-оранжевый */
+    --primary-light: #fb923c;          /* Светло-оранжевый */
+    
+    --secondary-color: #a16207;        /* Золотистый */
+    --secondary-dark: #854d0e;         /* Темно-золотистый */
+    --accent-color: #dc2626;           /* Красный акцент */
+    
+    --text-primary: #1f2937;
+    --text-secondary: #6b7280;
+    --text-light: #9ca3af;
+    --text-white: #ffffff;
+    
+    --bg-primary: #ffffff;
+    --bg-secondary: #fef3c7;           /* Светло-желтый фон */
+    --bg-dark: #1f2937;
+    --bg-overlay: rgba(0, 0, 0, 0.4);
+    
+    --border-color: #fbbf24;           /* Желтая граница */
+    --border-focus: #f97316;
+}
+
+/* Схема 2: Профессиональная (Сине-серая) */
+.color-scheme-professional {
+    --primary-color: #1e40af;          
+    --primary-dark: #1e3a8a;           
+    --primary-light: #3b82f6;          
+    
+    --secondary-color: #64748b;        
+    --secondary-dark: #475569;         
+    --accent-color: #0ea5e9;           
+    
+    --text-primary: #0f172a;
+    --text-secondary: #475569;
+    --text-light: #94a3b8;
+    --text-white: #ffffff;
+    
+    --bg-primary: #ffffff;
+    --bg-secondary: #f8fafc;
+    --bg-dark: #0f172a;
+    --bg-overlay: rgba(0, 0, 0, 0.4);
+    
+    --border-color: #cbd5e1;
+    --border-focus: #1e40af;
+}
+
+/* Схема 3: Природная (Зеленая) */
+.color-scheme-nature {
+    --primary-color: #059669;          /* Зеленый */
+    --primary-dark: #047857;           /* Темно-зеленый */
+    --primary-light: #10b981;          /* Светло-зеленый */
+    
+    --secondary-color: #65a30d;        /* Лаймовый */
+    --secondary-dark: #4d7c0f;         /* Темно-лаймовый */
+    --accent-color: #f59e0b;           /* Оранжевый акцент */
+    
+    --text-primary: #1f2937;
+    --text-secondary: #6b7280;
+    --text-light: #9ca3af;
+    --text-white: #ffffff;
+    
+    --bg-primary: #ffffff;
+    --bg-secondary: #f0fdf4;           /* Светло-зеленый фон */
+    --bg-dark: #064e3b;
+    --bg-overlay: rgba(0, 0, 0, 0.4);
+    
+    --border-color: #bbf7d0;           /* Светло-зеленая граница */
+    --border-focus: #059669;
+}
+
+/* Схема 4: Элегантная (Фиолетовая) */
+.color-scheme-elegant {
+    --primary-color: #7c3aed;          /* Фиолетовый */
+    --primary-dark: #6d28d9;           /* Темно-фиолетовый */
+    --primary-light: #a855f7;          /* Светло-фиолетовый */
+    
+    --secondary-color: #ec4899;        /* Розовый */
+    --secondary-dark: #db2777;         /* Темно-розовый */
+    --accent-color: #f59e0b;           /* Оранжевый акцент */
+    
+    --text-primary: #1f2937;
+    --text-secondary: #6b7280;
+    --text-light: #9ca3af;
+    --text-white: #ffffff;
+    
+    --bg-primary: #ffffff;
+    --bg-secondary: #faf5ff;           /* Светло-фиолетовый фон */
+    --bg-dark: #1e1b4b;
+    --bg-overlay: rgba(0, 0, 0, 0.4);
+    
+    --border-color: #e9d5ff;           /* Светло-фиолетовая граница */
+    --border-focus: #7c3aed;
+}
+
+/* Схема 5: Минималистичная (Монохромная) */
+.color-scheme-minimal {
+    --primary-color: #374151;          /* Серый */
+    --primary-dark: #1f2937;           /* Темно-серый */
+    --primary-light: #6b7280;          /* Светло-серый */
+    
+    --secondary-color: #9ca3af;        /* Светло-серый */
+    --secondary-dark: #6b7280;         /* Средне-серый */
+    --accent-color: #f59e0b;           /* Оранжевый акцент */
+    
+    --text-primary: #111827;
+    --text-secondary: #4b5563;
+    --text-light: #9ca3af;
+    --text-white: #ffffff;
+    
+    --bg-primary: #ffffff;
+    --bg-secondary: #f9fafb;
+    --bg-dark: #111827;
+    --bg-overlay: rgba(0, 0, 0, 0.4);
+    
+    --border-color: #e5e7eb;
+    --border-focus: #374151;
+}
+
+/* Схема 6: Энергичная (Красно-оранжевая) */
+.color-scheme-energetic {
+    --primary-color: #dc2626;          /* Красный */
+    --primary-dark: #b91c1c;           /* Темно-красный */
+    --primary-light: #ef4444;          /* Светло-красный */
+    
+    --secondary-color: #f97316;        /* Оранжевый */
+    --secondary-dark: #ea580c;         /* Темно-оранжевый */
+    --accent-color: #fbbf24;           /* Желтый акцент */
+    
+    --text-primary: #1f2937;
+    --text-secondary: #6b7280;
+    --text-light: #9ca3af;
+    --text-white: #ffffff;
+    
+    --bg-primary: #ffffff;
+    --bg-secondary: #fef2f2;           /* Светло-красный фон */
+    --bg-dark: #450a0a;
+    --bg-overlay: rgba(0, 0, 0, 0.4);
+    
+    --border-color: #fecaca;           /* Светло-красная граница */
+    --border-focus: #dc2626;
+}
+
+/* Схема 7: Океанская (Бирюзовая) */
+.color-scheme-ocean {
+    --primary-color: #0891b2;          /* Бирюзовый */
+    --primary-dark: #0e7490;           /* Темно-бирюзовый */
+    --primary-light: #22d3ee;          /* Светло-бирюзовый */
+    
+    --secondary-color: #0ea5e9;        /* Голубой */
+    --secondary-dark: #0284c7;         /* Темно-голубой */
+    --accent-color: #f59e0b;           /* Оранжевый акцент */
+    
+    --text-primary: #1f2937;
+    --text-secondary: #6b7280;
+    --text-light: #9ca3af;
+    --text-white: #ffffff;
+    
+    --bg-primary: #ffffff;
+    --bg-secondary: #f0f9ff;           /* Светло-голубой фон */
+    --bg-dark: #0c4a6e;
+    --bg-overlay: rgba(0, 0, 0, 0.4);
+    
+    --border-color: #bae6fd;           /* Светло-голубая граница */
+    --border-focus: #0891b2;
+}
+
+/* Схема 8: Классическая (Красно-золотая) */
+.color-scheme-classic {
+    --primary-color: #b91c1c;          /* Темно-красный */
+    --primary-dark: #991b1b;           /* Очень темно-красный */
+    --primary-light: #dc2626;          /* Красный */
+    
+    --secondary-color: #d97706;        /* Золотистый */
+    --secondary-dark: #b45309;         /* Темно-золотистый */
+    --accent-color: #fbbf24;           /* Желтый акцент */
+    
+    --text-primary: #1f2937;
+    --text-secondary: #6b7280;
+    --text-light: #9ca3af;
+    --text-white: #ffffff;
+    
+    --bg-primary: #ffffff;
+    --bg-secondary: #fef3c7;           /* Светло-желтый фон */
+    --bg-dark: #450a0a;
+    --bg-overlay: rgba(0, 0, 0, 0.4);
+    
+    --border-color: #fde68a;           /* Светло-желтая граница */
+    --border-focus: #b91c1c;
+}
+
+/* Утилиты для быстрого переключения схем */
+.color-scheme-warm .hero__background {
+    background: linear-gradient(135deg, 
+        var(--primary-color) 0%, 
+        var(--secondary-color) 50%, 
+        var(--bg-dark) 50%, 
+        var(--bg-dark) 100%);
+}
+
+.color-scheme-professional .hero__background {
+    background: linear-gradient(135deg, 
+        var(--primary-color) 0%, 
+        var(--secondary-color) 50%, 
+        var(--bg-dark) 50%, 
+        var(--bg-dark) 100%);
+}
+
+.color-scheme-nature .hero__background {
+    background: linear-gradient(135deg, 
+        var(--primary-color) 0%, 
+        var(--secondary-color) 50%, 
+        var(--bg-dark) 50%, 
+        var(--bg-dark) 100%);
+}
+
+.color-scheme-elegant .hero__background {
+    background: linear-gradient(135deg, 
+        var(--primary-color) 0%, 
+        var(--secondary-color) 50%, 
+        var(--bg-dark) 50%, 
+        var(--bg-dark) 100%);
+}
+
+.color-scheme-minimal .hero__background {
+    background: linear-gradient(135deg, 
+        var(--primary-color) 0%, 
+        var(--secondary-color) 50%, 
+        var(--bg-dark) 50%, 
+        var(--bg-dark) 100%);
+}
+
+.color-scheme-energetic .hero__background {
+    background: linear-gradient(135deg, 
+        var(--primary-color) 0%, 
+        var(--secondary-color) 50%, 
+        var(--bg-dark) 50%, 
+        var(--bg-dark) 100%);
+}
+
+.color-scheme-ocean .hero__background {
+    background: linear-gradient(135deg, 
+        var(--primary-color) 0%, 
+        var(--secondary-color) 50%, 
+        var(--bg-dark) 50%, 
+        var(--bg-dark) 100%);
+}
+
+.color-scheme-classic .hero__background {
+    background: linear-gradient(135deg, 
+        var(--primary-color) 0%, 
+        var(--secondary-color) 50%, 
+        var(--bg-dark) 50%, 
+        var(--bg-dark) 100%);
+}
