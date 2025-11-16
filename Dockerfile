@@ -1,7 +1,7 @@
-FROM node:18-alpine
+FROM node:18-bullseye
 
 # Устанавливаем Python и pip
-RUN apk add --no-cache python3 py3-pip
+RUN apt-get update && apt-get install -y python3 python3-pip gcc libffi-dev libssl-dev
 
 # Устанавливаем рабочую директорию
 WORKDIR /app
